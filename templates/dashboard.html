@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <h1>Shop Credit Dashboard</h1>
+
+    <p>Pending Customers:{{pending_count}}</p>
+    <p>Total Amount Pending:₹{{total_pending}}</p>
+    <p>Total Amount Collected:₹{{total_collected}}</p> 
+
+    <h2>Pending Customer List</h2>
+    {% for customer in borrowers %}
+
+    <p>
+        {{customer["name"]}}-{{customer["phone"]}}
+        </p>
+
+    {% endfor %}
+
+    <br>
+
+    <a href="/">Back to Home</a>
+
+</body>
+
+</html> 
