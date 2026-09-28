@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>View Customers</title>
+</head>
+
+<body>
+    <h1>Pending Customers</h1>
+    <a href="/">Back to Home</a>
+
+    <br><br>
+
+    {% for customer in borrowers %}
+    <h2>{{customer["name"]}}</h2>
+
+    <p>Phone:{{customer["phone"]}}</p>
+    <p>Item:{{customer["item"]}}</p>
+    <p>Quantity:{{customer["quantity"]}}</p>
+    <p>Amount Due:₹{{customer["amount"]}}</p>
+
+    <hr>
+    {% endfor %}
+
+</body>
+
+</html>
+   
